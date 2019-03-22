@@ -42,6 +42,10 @@ public class movementScript : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && !jumping){
             this.gameObject.GetComponent<Rigidbody>().AddForce(this.gameObject.transform.up * forceJump);
         }
+        if (this.gameObject.transform.position.y < -10){
+            this.gameObject.transform.position = new Vector3(0, 3, 0);
+
+        }
        
 
     }
