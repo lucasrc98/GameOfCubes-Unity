@@ -63,4 +63,10 @@ public class movementScript : MonoBehaviour
                 Debug.Log("jumping true");
             }
         }
+
+    private void OnCollisionStay(Collision col){
+        if (col.gameObject.tag == "maca"){
+            Destroy(col.gameObject);
+        }
+    }
 }
